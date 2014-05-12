@@ -1,6 +1,9 @@
 class MoviesController < ApplicationController
   def index
     @list_of_movies = Movie.all
+    @director = Director.all
+    @director.name
+
   end
 
   def show
@@ -9,5 +12,6 @@ class MoviesController < ApplicationController
     # Store the movie in the @movie instance variable so the view can format it
 
     @movie = Movie.find(params[:id])
+
   end
 end
